@@ -9,7 +9,7 @@ const Hero = () => {
                 minHeight: '100vh',
                 display: 'flex',
                 alignItems: 'center',
-                backgroundImage: 'linear-gradient(rgba(15, 44, 76, 0.9), rgba(15, 44, 76, 0.85)), url("/images/hero-bg.png")',
+                backgroundImage: `linear-gradient(rgba(15, 44, 76, 0.9), rgba(15, 44, 76, 0.85)), url("${import.meta.env.BASE_URL}images/hero-bg.png")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 color: 'white',
@@ -75,7 +75,7 @@ const Hero = () => {
                     <Grid item xs={12} md={6}>
                         <Box
                             component="img"
-                            src="/images/hero-bg_2.png"
+                            src={`${import.meta.env.BASE_URL}images/hero-bg_2.png`}
                             alt="Software Dashboard Curaduría"
                             sx={{
                                 width: '100%',

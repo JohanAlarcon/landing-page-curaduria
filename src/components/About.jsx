@@ -16,7 +16,7 @@ const About = () => {
                         >
                             <Box
                                 component="img"
-                                src="/images/engineer-tablet.png"
+                                src={`${import.meta.env.BASE_URL}images/engineer-tablet.png`}
                                 alt="Ingeniero Curaduría"
                                 sx={{
                                     width: '100%',
