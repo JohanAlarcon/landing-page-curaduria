@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://JohanAlarcon.github.io/landing-page-curaduria/sitemap.xml
