@@ -26,7 +26,6 @@ const Navbar = () => {
         { title: 'Inicio', path: '#' },
         { title: 'Características', path: '#caracteristicas' },
         { title: 'Software', path: '#nosotros' },
-        { title: 'Solicitar Demo', path: '#contacto' },
     ];
 
     const toggleDrawer = (open) => (event) => {
@@ -80,11 +79,17 @@ const Navbar = () => {
                                                 <ListItemText primary={link.title} />
                                             </ListItem>
                                         ))}
-                                        {/* <ListItem>
-                                            <Button variant="contained" color="primary" fullWidth href="/login">
-                                                Acceso Funcionarios
+                                        <ListItem>
+                                            <Button
+                                                variant="contained"
+                                                color="secondary"
+                                                fullWidth
+                                                href="https://demo-curaduria.site/login"
+                                                target="_blank"
+                                            >
+                                                Demo
                                             </Button>
-                                        </ListItem> */}
+                                        </ListItem>
                                     </List>
                                 </Box>
                             </Drawer>
@@ -104,14 +109,21 @@ const Navbar = () => {
                                     {link.title}
                                 </Button>
                             ))}
-                            {/* <Button 
-                                variant={scrolled ? "contained" : "outlined"} 
+                            <Button
+                                variant={scrolled ? "outlined" : "outlined"}
                                 color={scrolled ? "primary" : "inherit"}
-                                href="/login"
-                                sx={{ borderRadius: 20 }}
+                                href="https://demo-curaduria.site/login"
+                                target="_blank"
+                                sx={{
+                                    ml: 2,
+                                    borderRadius: 2,
+                                    borderWidth: 2,
+                                    fontWeight: 700,
+                                    '&:hover': { borderWidth: 2 }
+                                }}
                             >
-                                Acceso Funcionarios
-                            </Button> */}
+                                Demo
+                            </Button>
                         </Box>
                     )}
                 </Toolbar>

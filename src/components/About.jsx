@@ -1,9 +1,8 @@
-import React from 'react';
 import { Box, Container, Grid, Typography, Button, Paper } from '@mui/material';
 
 const About = () => {
     return (
-        <Box id="nosotros" sx={{ py: 12 }}>
+        <Box id="nosotros">
             <Container maxWidth="lg">
                 <Grid container spacing={8} alignItems="center">
                     <Grid item xs={12} md={6}>
@@ -12,25 +11,34 @@ const About = () => {
                             sx={{
                                 borderRadius: 4,
                                 overflow: 'hidden',
-                                height: '500px',
-                                backgroundImage: 'url("/images/about-us.jpg")',
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
+                                display: 'flex'
                             }}
-                        />
+                        >
+                            <Box
+                                component="img"
+                                src="/images/engineer-tablet.png"
+                                alt="Ingeniero Curaduría"
+                                sx={{
+                                    width: '100%',
+                                    height: { xs: 'auto', md: '100%' },
+                                    display: 'block',
+                                    objectFit: 'cover'
+                                }}
+                            />
+                        </Paper>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography variant="overline" color="secondary" fontWeight={700} sx={{ letterSpacing: 2 }}>
+                        <Typography variant="h6" color="secondary" fontWeight={700} sx={{ letterSpacing: 2 }}>
                             POR QUÉ ELEGIRNOS
                         </Typography>
                         <Typography variant="h3" component="h2" color="primary" sx={{ my: 2, fontWeight: 700 }}>
                             La plataforma #1 en Colombia para Curadores Urbanos
                         </Typography>
-                        <Typography variant="body1" paragraph color="text.secondary" sx={{ fontSize: '1.1rem', mb: 3 }}>
-                            Diseñado específicamente para cumplir con la Ley 388 de 1997, el Decreto 1077 de 2015 y demás normas vigentes. Nuestro software no es una adaptación genérica: es una herramienta especializada que entiende su lenguaje.
+                        <Typography variant="body1" paragraph color="text.secondary" sx={{ fontSize: '1.1rem', mb: 3, lineHeight: 1.8 }}>
+                            Desarrollamos tecnología especializada para el cumplimiento de la Ley 388 y el Decreto 1077. Nuestra plataforma en la nube elimina el caos del papel y centraliza su operación en un entorno digital seguro y eficiente.
                         </Typography>
-                        <Typography variant="body1" paragraph color="text.secondary" sx={{ fontSize: '1.1rem', mb: 4 }}>
-                            Olvídese de las tareas manuales repetitivas y minimice el riesgo jurídico con nuestras plantillas inteligentes y alertas tempranas. Únase a las curadurías líderes que ya digitalizaron su operación.
+                        <Typography variant="body1" paragraph color="text.secondary" sx={{ fontSize: '1.1rem', mb: 4, lineHeight: 1.8 }}>
+                            Más que un software, somos su aliado estratégico en la transformación digital. Garantizamos disponibilidad del 99.9% y soporte técnico experto para que su Curaduría nunca se detenga.
                         </Typography>
                         <Button variant="outlined" color="primary" size="large" href="#contacto">
                             Conocer más detalles

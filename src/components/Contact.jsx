@@ -10,65 +10,43 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Contact = () => {
     return (
         <Box id="contacto" sx={{ bgcolor: 'secondary.main', color: 'primary.dark' }}>
-            <Box sx={{ py: 10, bgcolor: 'background.paper' }}>
+            <Box sx={{ py: 5, bgcolor: 'background.paper' }}>
                 <Container maxWidth="lg">
-                    <Grid container spacing={8}>
-                        <Grid item xs={12} md={5}>
+                    <Grid container spacing={8} justifyContent="center" alignItems="center">
+                        <Grid item xs={12} md={8} textAlign="center">
                             <Typography variant="overline" color="secondary" fontWeight={700} sx={{ letterSpacing: 2 }}>
-                                SOLICITAR DEMO
+                                CONTÁCTENOS
                             </Typography>
                             <Typography variant="h3" component="h2" color="primary" sx={{ my: 2, fontWeight: 700 }}>
-                                Empiece su transformación digital
+                                Estamos para ayudarle
                             </Typography>
-                            <Stack spacing={4} sx={{ mt: 4 }}>
-                                <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem' }}>
-                                    Deje sus datos y uno de nuestros expertos le contactará para agendar una demostración personalizada del software.
-                                </Typography>
-                                <Box display="flex" gap={2}>
-                                    <EmailIcon color="secondary" fontSize="large" />
-                                    <Box>
-                                        <Typography variant="h6" fontWeight={600}>Correo Electrónico</Typography>
-                                        <Typography variant="body1" color="text.secondary">
-                                            ventas@softwarecuraduria.com
-                                        </Typography>
-                                    </Box>
-                                </Box>
-                                <Box display="flex" gap={2}>
-                                    <PhoneIcon color="secondary" fontSize="large" />
-                                    <Box>
-                                        <Typography variant="h6" fontWeight={600}>Soporte Comercial</Typography>
-                                        <Typography variant="body1" color="text.secondary">
-                                            (+57) 300 123 4567
-                                        </Typography>
-                                    </Box>
-                                </Box>
+                            <Typography variant="body1" paragraph sx={{ fontSize: '1.2rem', mb: 6, maxWidth: 600, mx: 'auto' }}>
+                                ¿Tiene preguntas sobre el software? Nuestro equipo de expertos está listo para resolver sus dudas.
+                            </Typography>
+
+                            <Stack
+                                direction={{ xs: 'column', md: 'row' }}
+                                spacing={4}
+                                justifyContent="center"
+                                alignItems="center"
+                                sx={{ mt: 4 }}
+                            >
+                                <Paper elevation={3} sx={{ p: 4, width: { xs: '100%', sm: 300 }, textAlign: 'center', borderRadius: 4 }}>
+                                    <EmailIcon color="secondary" sx={{ fontSize: 40, mb: 2 }} />
+                                    <Typography variant="h6" fontWeight={600} gutterBottom>Correo</Typography>
+                                    <Typography variant="body1" color="text.secondary">
+                                        {import.meta.env.VITE_CONTACT_EMAIL}
+                                    </Typography>
+                                </Paper>
+
+                                <Paper elevation={3} sx={{ p: 4, width: { xs: '100%', sm: 300 }, textAlign: 'center', borderRadius: 4 }}>
+                                    <PhoneIcon color="secondary" sx={{ fontSize: 40, mb: 2 }} />
+                                    <Typography variant="h6" fontWeight={600} gutterBottom>Línea Directa</Typography>
+                                    <Typography variant="body1" color="text.secondary">
+                                        {import.meta.env.VITE_CONTACT_PHONE}
+                                    </Typography>
+                                </Paper>
                             </Stack>
-                        </Grid>
-                        <Grid item xs={12} md={7}>
-                            <Paper elevation={0} sx={{ p: 4, bgcolor: 'background.default', borderRadius: 2, border: '1px solid', borderColor: 'divider' }} component={Paper}>
-                                <Grid container spacing={3}>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField fullWidth label="Nombre Completo" variant="outlined" />
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField fullWidth label="Cargo / Curaduría" variant="outlined" />
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField fullWidth label="Correo Corporativo" variant="outlined" />
-                                    </Grid>
-                                    <Grid item xs={12} sm={6}>
-                                        <TextField fullWidth label="Teléfono" variant="outlined" />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextField fullWidth label="¿Qué desafíos enfrenta actualmente?" multiline rows={4} variant="outlined" />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <Button variant="contained" color="secondary" size="large" fullWidth sx={{ py: 1.5, fontSize: '1rem' }}>
-                                            Solicitar Demostración Gratis
-                                        </Button>
-                                    </Grid>
-                                </Grid>
-                            </Paper>
                         </Grid>
                     </Grid>
                 </Container>

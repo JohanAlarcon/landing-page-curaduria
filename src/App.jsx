@@ -7,6 +7,10 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 
+import WhatsAppButton from './components/WhatsAppButton';
+
+import DemoCallToAction from './components/DemoCallToAction';
+
 function App() {
     return (
         <ThemeProvider theme={theme}>
@@ -16,7 +20,9 @@ function App() {
                 <Hero />
                 <Services />
                 <About />
+                <DemoCallToAction />
                 <Contact />
+                <WhatsAppButton />
             </Box>
         </ThemeProvider>
     );

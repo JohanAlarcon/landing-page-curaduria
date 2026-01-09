@@ -7,30 +7,30 @@ import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 
 const features = [
     {
-        title: 'Radicación 100% Digital',
-        description: 'Permita a sus usuarios radicar solicitudes desde cualquier lugar. Recepción de documentos en línea con validación previa.',
+        title: 'Almacenamiento en la Nube',
+        description: 'Acceda a todos los expedientes y planos desde cualquier lugar y dispositivo. Sincronización en tiempo real y cero dependencia de servidores físicos.',
         icon: <CloudUploadIcon fontSize="large" color="secondary" />
     },
     {
-        title: 'Flujos Automatizados',
-        description: 'Control total de tiempos y movimientos. Semáforos de alerta para vencimiento de términos y gestión de tareas.',
+        title: 'Gestión Automatizada',
+        description: 'Reduzca tiempos de respuesta con flujos de trabajo inteligentes. Alertas de vencimiento y asignación automática de tareas al equipo.',
         icon: <SpeedIcon fontSize="large" color="secondary" />
     },
     {
-        title: 'Expedición de Actos',
-        description: 'Generación automática de resoluciones, actas y licencias utilizando plantillas jurídicas actualizadas.',
+        title: 'Generación de Documentos',
+        description: 'Cree resoluciones y actas de observación en segundos con plantillas jurídicas pre-aprobadas y datos centralizados.',
         icon: <AssignmentTurnedInIcon fontSize="large" color="secondary" />
     },
     {
-        title: 'Seguridad y Archivo',
-        description: 'Repositorio digital seguro con copias de respaldo. Trazabilidad completa de cada modificación en el expediente.',
+        title: 'Seguridad Bancaria',
+        description: 'Sus datos protegidos con encriptación de última generación. Copias de seguridad diarias automáticas y auditoría de accesos.',
         icon: <SecurityIcon fontSize="large" color="secondary" />
     }
 ];
 
 const Services = () => {
     return (
-        <Box id="caracteristicas" sx={{ py: 12, bgcolor: 'background.paper' }}>
+        <Box id="caracteristicas" sx={{ py: 7, bgcolor: 'background.paper' }}>
             <Container maxWidth="lg">
                 <Box textAlign="center" mb={8}>
                     <Typography variant="overline" color="secondary" fontWeight={700} sx={{ letterSpacing: 2 }}>
@@ -42,7 +42,7 @@ const Services = () => {
                 </Box>
                 <Grid container spacing={4}>
                     {features.map((feature, index) => (
-                        <Grid item xs={12} md={6} lg={3} key={index}>
+                        <Grid item size={{ xs: 12, md: 3, lg: 3 }} key={index}>
                             <Card
                                 sx={{
                                     height: '100%',
